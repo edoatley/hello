@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: DEFAULT
+
+---
+
+spring:
+  profiles: one
+  application:
+    name: HELLO-V1
+
+message:
+  returned:
+    text: Hello world!
+
+server:
+  port : 8082
+
+---
+
+spring:
+  profiles: two
+  application:
+    name: HELLO-V2
+
+message:
+  returned:
+    text: Goodbye!
+
+server:
+  port : 8081
+
+eureka:
+  instance:
+    hostname: http://www.something.com
